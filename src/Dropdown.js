@@ -18,18 +18,13 @@ export default class Dropdown extends React.Component<Props> {
   };
 
   render() {
-    var style = _objectSpread(
-      {},
-      {
-        background: "white",
-        border: "1px solid rgba(0,0,0,.2)",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-        padding: "6px 0",
-        style: style,
-      },
-      {},
-      this.props.style || {}
-    );
+    var style = {
+      background: "white",
+      border: "1px solid rgba(0,0,0,.2)",
+      boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+      padding: "6px 0",
+      ...(this.props.style || {}),
+    };
 
     return (
       <div className={this.props.className} style={style}>
